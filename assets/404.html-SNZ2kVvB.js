@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-3706649a","path":"/404.html","title":"","lang":"zh-CN","frontmatter":{"layout":"NotFound"},"headers":[],"git":{},"readingTime":{"minutes":0,"words":0},"filePathRelative":null,"copyright":{"author":"杨祖攀","license":" CC BY-NC-ND 4.0 "}}');export{t as data};
