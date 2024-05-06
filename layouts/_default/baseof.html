@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="{{ .Site.Language.LanguageCode }}">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ block "title" . }}{{ .Site.Title }} - {{ .Site.Params.subTitle }}{{ end }}</title>
+    <meta name="keywords" content="{{ .Site.Params.keywords }}" />
+    <meta name="description" content="{{ .Site.Params.description }}" />
+    {{- with resources.Get "css/main.css" }} {{- if eq hugo.Environment "development" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" />
+    {{- else }} {{- with . | minify }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" />
+    {{- end }} {{- end }} {{- end }}
+</head>
+
+<body class="w-full bg-white text-neutral-800 dark:bg-black dark:text-neutral-100">
+    <div class="flex min-h-screen flex-col">
+        <main class="flex-auto">{{ block "main" . }}{{ end }}</main>
+    </div>
+
+
+    {{- with resources.Get "js/main.js" }} {{- if eq
+    hugo.Environment "development" }} {{- with . | js.Build }}
+    <script src="{{ .RelPermalink }}"></script>
+    {{- end }} {{- else }} {{- $opts := dict "minify" true }} {{- with . |
+    js.Build $opts }}
+    <script src="{{ .RelPermalink }}"></script>
+    {{- end }} {{- end }} {{- end }}
+
+</body>
+
+</html>

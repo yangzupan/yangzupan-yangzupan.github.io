@@ -1,0 +1,22 @@
+baseURL = 'https://www.yangzupan.com/'
+languageCode = 'zh-CN'
+title = '杨祖攀'
+disableKinds = ['taxonomy', 'term']
+minify = false
+publishDir = 'public1'
+
+[params]
+    subTitle = '个人主页'
+    keywords = '杨祖攀,杨攀,祖攀,阿攀,个人主页,个人网站'
+    description = '杨祖攀，一个正在成长、不断进化、持续学习的九五后创业者。'
+    avatar = '/img/avatar.jpg'
+    siteName = '杨祖攀'
+    siteDescription = '一个正在成长、不断进化、持续学习的九五后创业者'
+
+[params.footer]
+    startDate = 2021
+    icp = '滇ICP备2021007697号-11'
+[params.footer.police]
+    number = 53038102530444
+    text = '滇公网安备 53038102530444 号'
+
