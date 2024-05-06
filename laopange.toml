@@ -3,7 +3,7 @@ languageCode = 'zh-CN'
 title = '老攀哥'
 disableKinds = ['taxonomy', 'term']
 minify = false
-publishDir = 'public1'
+publishDir = 'public2'
 
 [params]
     subTitle = '个人主页'
