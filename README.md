@@ -10,7 +10,7 @@
 
 ### 阿里云
 
-本站使用了 阿里云OSS 提供的静态网站托管服务，演示地址如下：
+本站使用了 阿里云 提供的静态网站托管服务，演示地址如下：
 
 - [https://www.yangzupan.com](https://www.yangzupan.com)
 
@@ -29,8 +29,6 @@
 ### Cloudflare
 
 本站使用了 Cloudflare 提供的静态网站托管服务 Cloudflare Pages，演示地址如下：
-
-- [https://www.yangzupan.net](https://www.yangzupan.net)
 
 - [https://yangzupan.pages.dev](https://yangzupan.pages.dev)
 

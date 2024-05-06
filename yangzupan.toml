@@ -2,7 +2,7 @@ baseURL = 'https://www.yangzupan.com/'
 languageCode = 'zh-CN'
 title = '杨祖攀'
 disableKinds = ['taxonomy', 'term']
-minify = false
+minify = true
 publishDir = 'public1'
 
 [params]
