@@ -109,7 +109,7 @@ jobs:
 
       # 构建文档
       - name: Build Docs
-        run: hugo --config apan.toml
+        run: hugo --config pange.toml
       
       # 同步文件到 OSS
       - name: Sync files to OSS
