@@ -7,6 +7,7 @@
     <title>{{ block "title" . }}{{ .Site.Title }} - {{ .Site.Params.subTitle }}{{ end }}</title>
     <meta name="keywords" content="{{ .Site.Params.keywords }}" />
     <meta name="description" content="{{ .Site.Params.description }}" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     {{- with resources.Get "css/main.css" }} {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}" />
     {{- else }} {{- with . | minify }}
@@ -15,11 +16,10 @@
 </head>
 
 <body class="w-full bg-white text-neutral-800 dark:bg-black dark:text-neutral-100">
-    <div class="flex min-h-screen flex-col">
-        <main class="flex-auto">{{ block "main" . }}{{ end }}</main>
+    <div class="flex min-h-lvh flex-col">
+        {{ block "content" . }}{{ end }}
     </div>
-
-
+    
     {{- with resources.Get "js/main.js" }} {{- if eq
     hugo.Environment "development" }} {{- with . | js.Build }}
     <script src="{{ .RelPermalink }}"></script>
@@ -27,7 +27,6 @@
     js.Build $opts }}
     <script src="{{ .RelPermalink }}"></script>
     {{- end }} {{- end }} {{- end }}
-
 </body>
 
 </html>
