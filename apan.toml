@@ -9,14 +9,18 @@ publishDir = 'public4'
     subTitle = '个人主页'
     keywords = '阿攀哥,杨祖攀,杨攀,祖攀,阿攀,个人主页,个人网站'
     description = '阿攀哥，一个正在成长、不断进化、持续学习的九五后创业者。'
-    avatar = '/img/avatar.jpg'
+    avatar = 'https://cdn.yangzupan.com/images/home/avatar.jpg!default'
     siteName = '阿攀哥'
     siteDescription = '一个正在成长、不断进化、持续学习的九五后创业者'
+
+[[params.head.cssFile]]
+    link = ''
+
 [params.main.intro]
-    title = '我叫 杨祖攀'
+    title = '我叫'
     subTitle = '你好，很高兴认识你👋'
     description = '一个正在不断学习，不断进步的创业者'
-    bgImg = '/img/me.jpg'
+    bgImg = 'https://cdn.yangzupan.com/images/home/bg/me.jpg!default'
 
 [[params.main.card]]
     title = '学习'
@@ -25,7 +29,6 @@ publishDir = 'public4'
     bgImg = '/img/01.jpg'
     butText = '查看'
     butLink = ''
-
 [[params.main.card]]
     title = '编程'
     subTitle = '爱好'
@@ -33,7 +36,6 @@ publishDir = 'public4'
     bgImg = '/img/02.jpg'
     butText = '查看'
     butLink = ''
-
 [[params.main.card]]
     title = '折腾'
     subTitle = '爱好'
@@ -49,9 +51,17 @@ publishDir = 'public4'
     butText = '查看'
     butLink = ''
 
+[[params.foot.jsFile]]
+    link = 'https://cdn.yangzupan.com/libs/flowbite/2.3.0/flowbite.min.js'
+[[params.foot.jsFile]]
+    link = 'https://cdn.yangzupan.com/libs/wesome-qr/2.1.5-rc.0/awesome-qr.min.js'
+[[params.foot.jsFile]]
+    link = 'https://cdn.yangzupan.com/libs/html2canvas/html2canvas.min.js'
+[[params.foot.jsFile]]
+    link = ''
     
 [params.footer]
-    startDate = 2021
+    startDate = 2022
     icp = '滇ICP备2021007697号-21'
 [params.footer.police]
     number = 53038102530528

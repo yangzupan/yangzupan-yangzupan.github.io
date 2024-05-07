@@ -29,7 +29,7 @@
         <div
           class="w-full md:w-6/12 flex flex-col justify-center gap-4 bg-gradient-to-r from-sky-500 to-blue-400 text-white rounded-xl p-4 md:p-6 ">
           <div class="text-base lg:text-lg opacity-80">{{.Site.Params.main.intro.subTitle}}</div>
-          <div class="text-2xl md:text-3xl">{{.Site.Params.main.intro.title}}</div>
+          <div class="text-2xl md:text-3xl">{{.Site.Params.main.intro.title}} {{ .Title}}</div>
           <div class="text-base lg:text-lg opacity-80">{{ .Site.Params.main.intro.description }}</div>
         </div>
         <div
@@ -250,7 +250,7 @@
           {{ if .Site.Params.footer.icp }}
           <a class="flex flex-row items-center gap-1 hover:text-sky-500" href="https://beian.miit.gov.cn/"
             target="_blank">
-            <img class="w-4 h-4" src="/img/icp.svg" alt="ICP备案">
+            <img class="w-4 h-4" src="https://cdn.yangzupan.com/images/public/icp.svg" alt="ICP备案">
             {{ .Site.Params.footer.icp }}
           </a>
           {{ end }}
@@ -258,7 +258,7 @@
           <a class="flex flex-row items-center gap-1 hover:text-sky-500"
             href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode={{ .Site.Params.footer.police.number }} "
             target="_blank">
-            <img class="w-4 h-4" src="/img/police.svg" alt="公安备案">
+            <img class="w-4 h-4" src="https://cdn.yangzupan.com/images/public/police.svg" alt="公安备案">
             {{ .Site.Params.footer.police.text }}
           </a>
           {{ end }}

@@ -2,54 +2,63 @@ baseURL = '/'
 languageCode = 'zh-CN'
 title = '杨祖攀'
 disableKinds = ['taxonomy', 'term']
-minify = false
+minify = true
 publishDir = 'public'
 
 [params]
     subTitle = '个人主页'
     keywords = '杨祖攀,杨攀,祖攀,阿攀,个人主页,个人网站'
     description = '杨祖攀，一个正在成长、不断进化、持续学习的九五后创业者。'
-    avatar = '/img/avatar.jpg'
+    avatar = 'https://cdn.yangzupan.com/images/home/avatar.jpg!default'
     siteName = '杨祖攀'
     siteDescription = '一个正在成长、不断进化、持续学习的九五后创业者'
 
+[[params.head.cssFile]]
+    link = ''
+
 [params.main.intro]
-    title = '我叫 杨祖攀'
+    title = '我叫'
     subTitle = '你好，很高兴认识你👋'
     description = '一个正在不断学习，不断进步的创业者'
-    bgImg = '/img/me.jpg'
+    bgImg = 'https://cdn.yangzupan.com/images/home/bg/me.jpg!default'
 
 [[params.main.card]]
     title = '学习'
     subTitle = '爱好'
     description = '好好学习，天天向上'
-    bgImg = '/img/01.jpg'
+    bgImg = 'https://cdn.yangzupan.com/images/home/bg/01.jpg!default'
     butText = '查看'
     butLink = ''
-
 [[params.main.card]]
     title = '编程'
     subTitle = '爱好'
     description = '编程，让生活更加美好'
-    bgImg = '/img/02.jpg'
+    bgImg = 'https://cdn.yangzupan.com/images/home/bg/02.jpg!default'
     butText = '查看'
     butLink = ''
-
 [[params.main.card]]
     title = '折腾'
     subTitle = '爱好'
     description = '生命不息，折腾不止。'
-    bgImg = '/img/03.jpg'
+    bgImg = 'https://cdn.yangzupan.com/images/home/bg/03.jpg!default'
     butText = '查看'
     butLink = ''
 [[params.main.card]]
     title = '旅行'
     subTitle = '爱好'
     description = '看不同的景，体会不一样的人生。'
-    bgImg = '/img/04.jpg'
+    bgImg = 'https://cdn.yangzupan.com/images/home/bg/04.jpg!default'
     butText = '查看'
     butLink = ''
 
+[[params.foot.jsFile]]
+    link = 'https://cdn.yangzupan.com/libs/flowbite/2.3.0/flowbite.min.js'
+[[params.foot.jsFile]]
+    link = 'https://cdn.yangzupan.com/libs/wesome-qr/2.1.5-rc.0/awesome-qr.min.js'
+[[params.foot.jsFile]]
+    link = 'https://cdn.yangzupan.com/libs/html2canvas/html2canvas.min.js'
+[[params.foot.jsFile]]
+    link = ''
 
 
 [params.footer]

@@ -7,7 +7,12 @@
     <title>{{ block "title" . }}{{ .Site.Title }} - {{ .Site.Params.subTitle }}{{ end }}</title>
     <meta name="keywords" content="{{ .Site.Params.keywords }}" />
     <meta name="description" content="{{ .Site.Params.description }}" />
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    {{range .Site.Params.head.cssFile}}
+    {{ if .link}}
+    <link rel="stylesheet" href="{{ .link}}">
+    {{ end }}
+    {{ end }}
     {{- with resources.Get "css/main.css" }}
     {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}" />
@@ -20,12 +25,12 @@
 
     {{ block "content" . }}{{ end }}
 
+    {{range .Site.Params.foot.jsFile}}
+    {{ if .link}}
+    <script src="{{ .link}}"></script>
+    {{ end }}
+    {{ end }}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/awesome-qr/2.1.5-rc.0/awesome-qr.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script src="https://cdn.yangzupan.com/libs/flowbite/2.3.0/flowbite.min.js"></script>
-
-    
     {{- with resources.Get "js/main.js" }}
     {{- if eq hugo.Environment "development" }}
     <script src="{{ .RelPermalink }}"></script>
