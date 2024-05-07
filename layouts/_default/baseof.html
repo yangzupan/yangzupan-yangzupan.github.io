@@ -8,25 +8,33 @@
     <meta name="keywords" content="{{ .Site.Params.keywords }}" />
     <meta name="description" content="{{ .Site.Params.description }}" />
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-    {{- with resources.Get "css/main.css" }} {{- if eq hugo.Environment "development" }}
+    {{- with resources.Get "css/main.css" }}
+    {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}" />
-    {{- else }} {{- with . | minify }}
+    {{- else }}{{- with . | minify }}
     <link rel="stylesheet" href="{{ .RelPermalink }}" />
-    {{- end }} {{- end }} {{- end }}
+    {{- end }}{{- end }}{{- end }}
 </head>
 
 <body class="w-full bg-white text-neutral-800 dark:bg-black dark:text-neutral-100">
-    <div class="flex min-h-lvh flex-col">
-        {{ block "content" . }}{{ end }}
-    </div>
+
+    {{ block "content" . }}{{ end }}
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/awesome-qr/2.1.5-rc.0/awesome-qr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdn.yangzupan.com/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
     
-    {{- with resources.Get "js/main.js" }} {{- if eq
-    hugo.Environment "development" }} {{- with . | js.Build }}
+    {{- with resources.Get "js/main.js" }}
+    {{- if eq hugo.Environment "development" }}
     <script src="{{ .RelPermalink }}"></script>
-    {{- end }} {{- else }} {{- $opts := dict "minify" true }} {{- with . |
-    js.Build $opts }}
+    {{- else }}
+    {{- with . | minify }}
     <script src="{{ .RelPermalink }}"></script>
-    {{- end }} {{- end }} {{- end }}
+    {{- end }}
+    {{- end }}
+    {{- end }}
 </body>
 
 </html>
