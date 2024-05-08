@@ -14,7 +14,7 @@ publishDir = 'public2'
     siteDescription = '一个正在成长、不断进化、持续学习的九五后创业者'
 
 [[params.head.cssFile]]
-    link = ''
+    link = 'https://cdn.yangzupan.com/libs/fontawesome/6.5.2/css/all.min.css'
 
 [params.main.intro]
     title = '我叫'
@@ -51,6 +51,53 @@ publishDir = 'public2'
     butText = '查看'
     butLink = ''
 
+[params.footer.contact]
+    [[params.footer.contact.list]]
+        name = '邮箱'
+        icon = 'fa-solid fa-envelope'
+        link = 'mailto:www@yangzupan.com'
+    [[params.footer.contact.list]]
+        name = '微信二维码'
+        icon = 'fa-brands fa-weixin'
+        isQrCode = true # 二维码必须有id
+        id = 'wx'
+        direction = '' # top,
+        link = 'https://u.wechat.com/EDzlGOmsLmBcZb_TCeBThNg'
+    [[params.footer.contact.list]]
+        name = 'qq'
+        icon = 'fa-brands fa-qq'
+        link = 'https://qm.qq.com/q/U5A4EIlGkG'
+    [[params.footer.contact.list]]
+        name = 'Github'
+        icon = 'fa-brands fa-github'
+        link = 'https://github.com/yangzupan'
+    [[params.footer.contact.list]]
+        name = 'Gitee'
+        icon = 'fa-solid fa-code-branch'
+        link = 'https://gitee.com/yangzupan'
+    [[params.footer.contact.list]]
+        name = 'B站'
+        icon = 'fa-brands fa-bilibili'
+        link = 'https://space.bilibili.com/382569208'
+    [[params.footer.contact.list]]
+        name = '抖音'
+        icon = 'fa-brands fa-tiktok'
+        link = 'https://v.douyin.com/idW8pXtW/'
+    [[params.footer.contact.list]]
+        name = '微博'
+        icon = 'fa-brands fa-weibo'
+        link = 'https://weibo.com/yangzupan'
+    [[params.footer.contact.list]]
+        name = '知乎'
+        icon = 'fa-brands fa-zhihu'
+        link = 'https://www.zhihu.com/people/yangzupan'
+
+[params.footer.copyright]
+    startDate = 2022
+    icp = '滇ICP备2021007697号-16'
+    police.number = 53038102530493
+    police.text = '滇公网安备 53038102530493 号'
+
 [[params.foot.jsFile]]
     link = 'https://cdn.yangzupan.com/libs/flowbite/2.3.0/flowbite.min.js'
 [[params.foot.jsFile]]
@@ -59,11 +106,3 @@ publishDir = 'public2'
     link = 'https://cdn.yangzupan.com/libs/html2canvas/html2canvas.min.js'
 [[params.foot.jsFile]]
     link = ''
- 
-[params.footer]
-    startDate = 2022
-    icp = '滇ICP备2021007697号-16'
-[params.footer.police]
-    number = 53038102530493
-    text = '滇公网安备 53038102530493 号'
-
