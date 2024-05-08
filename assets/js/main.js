@@ -6,15 +6,6 @@ function goToMain() {
   });
 }
 // 夜间模式切换
-if (localStorage.getItem("color-theme") === "dark" || (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
-) {
-  document.documentElement.classList.add("dark");
-  document.querySelector('meta[name="theme-color"]').setAttribute('content', '#171717')
-} else {
-  document.documentElement.classList.remove("dark");
-  document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-
-}
 function switchDarkMode() {
   if (localStorage.getItem("color-theme")) {
     if (localStorage.getItem("color-theme") === "light") {
