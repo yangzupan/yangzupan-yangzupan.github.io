@@ -14,7 +14,7 @@ function switchDarkMode() {
     if (localStorage.getItem("color-theme") === "light") {
       document.documentElement.classList.add("dark");
       localStorage.setItem("color-theme", "dark");
-      setThemeColor('#000000');
+      setThemeColor('#171717');
     } else {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("color-theme", "light");
@@ -28,7 +28,7 @@ function switchDarkMode() {
     } else {
       document.documentElement.classList.add("dark");
       localStorage.setItem("color-theme", "dark");
-      setThemeColor('#000000');
+      setThemeColor('#171717');
     }
   }
 }
