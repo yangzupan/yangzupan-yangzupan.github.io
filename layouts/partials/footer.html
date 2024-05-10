@@ -4,11 +4,12 @@
         {{ range .Site.Params.footer.contact.list}}
         {{ if .isQrCode}}
         {{ if .id}}
-        <button data-dropdown-toggle="{{ .id }}" data-dropdown-placement="{{ .direction }}"
-            class="group w-11 h-11  flex justify-center items-center  rounded-full bg-neutral-200 dark:bg-neutral-800 hover:bg-sky-500 dark:hover:bg-sky-500">
+        
+        <button data-dropdown-toggle="{{ .id }}" data-dropdown-placement="{{ .direction }} " aria-label="{{ .name }}"
+            class="group w-11 h-11  flex justify-center items-center  rounded-full bg-neutral-100 dark:bg-neutral-800">
             <i class="{{ .icon }} fa-lg text-neutral-700 dark:text-neutral-100"></i>
         </button>
-        <div id="{{ .id }}" class="z-10 hidden bg-neutral-100 divide-y rounded-lg  w-44 dark:bg-neutral-800">
+        <div id="{{ .id }}" class="z-10 hidden bg-neutral-100 divide-y rounded-lg w-44 dark:bg-neutral-800">
             <div class="p-4">
                 <img src="" data-qrcode-link="{{ .link }}" data-qrcode-img alt="{{ .name }}">
             </div>
@@ -16,8 +17,8 @@
         {{ end }}
         {{ else}}
         {{ if .link}}
-        <a href="{{ .link }}"
-            class="group w-11 h-11 flex justify-center items-center rounded-full bg-neutral-200 dark:bg-neutral-800 hover:bg-sky-500 dark:hover:bg-sky-500"
+        <a href="{{ .link }}"  aria-label="{{ .name }}"
+            class="group w-11 h-11 flex justify-center items-center rounded-full bg-neutral-100 dark:bg-neutral-800"
             target="_blank" rel="noopener noreferrer">
             <i class="{{ .icon }} fa-lg text-neutral-700 dark:text-neutral-100"></i>
         </a>
@@ -25,8 +26,8 @@
         {{ end }}
         {{ end }}
         <!-- 夜间模式 -->
-        <button type="button" onclick="switchDarkMode()"
-            class="group w-11 h-11 flex justify-center items-center rounded-full bg-neutral-200 dark:bg-neutral-800 hover:bg-sky-500 dark:hover:bg-sky-500">
+        <button type="button" onclick="switchDarkMode()" aria-label="夜间模式"
+            class="group w-11 h-11 flex justify-center items-center rounded-full bg-neutral-100 dark:bg-neutral-800">
             <i class="fa-solid fa-lightbulb text-neutral-700 dark:text-neutral-100"></i>
         </button>
     </div>
