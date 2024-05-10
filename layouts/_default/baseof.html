@@ -24,6 +24,11 @@
     <link rel="stylesheet" href="{{ .link}}">
     {{ end }}
     {{ end }}
+    {{range .Site.Params.head.jsFile}}
+    {{ if .link}}
+    <script src="{{ .link}}"></script>
+    {{ end }}
+    {{ end }}
     {{- with resources.Get "css/main.css" }}
     {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}" />
