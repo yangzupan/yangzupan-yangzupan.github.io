@@ -4,20 +4,22 @@
         {{ range .Site.Params.footer.contact.list}}
         {{ if .isQrCode}}
         {{ if .id}}
-        
-        <button data-dropdown-toggle="{{ .id }}" data-dropdown-placement="{{ .direction }} " aria-label="{{ .name }}"
+        <button data-popover-target="{{ .id }}" type="button"
             class="group w-11 h-11  flex justify-center items-center  rounded-full bg-neutral-100 dark:bg-neutral-800">
             <i class="{{ .icon }} fa-lg text-neutral-700 dark:text-neutral-100"></i>
         </button>
-        <div id="{{ .id }}" class="z-10 hidden bg-neutral-100 divide-y rounded-lg w-44 dark:bg-neutral-800">
+
+        <div data-popover id="{{ .id }}" role="tooltip"
+            class="absolute z-10 invisible inline-block w-40 bg-neutral-100 divide-y rounded-lg  dark:bg-neutral-800">
             <div class="p-4">
                 <img src="" data-qrcode-link="{{ .link }}" data-qrcode-img alt="{{ .name }}">
             </div>
+            <div data-popper-arrow></div>
         </div>
         {{ end }}
         {{ else}}
         {{ if .link}}
-        <a href="{{ .link }}"  aria-label="{{ .name }}"
+        <a href="{{ .link }}" aria-label="{{ .name }}"
             class="group w-11 h-11 flex justify-center items-center rounded-full bg-neutral-100 dark:bg-neutral-800"
             target="_blank" rel="noopener noreferrer">
             <i class="{{ .icon }} fa-lg text-neutral-700 dark:text-neutral-100"></i>
@@ -36,7 +38,8 @@
     <div
         class="min-h-14 py-2 flex flex-col-reverse sm:flex-col lg:flex-row justify-center items-center gap-2 text-sm lg:text-base">
         <div class="text-center">
-            Copyright © {{ if ( lt .Site.Params.footer.copyright.startDate now.Year) }}{{ .Site.Params.footer.copyright.startDate }} -
+            Copyright © {{ if ( lt .Site.Params.footer.copyright.startDate now.Year) }}{{
+            .Site.Params.footer.copyright.startDate }} -
             {{now.Year }}{{ else }}{{ now.Year }}{{ end }} <a href="{{ absURL "" }}"
                 class="font-semibold hover:text-sky-500">{{ .Site.Title }}</a> All Rights Reserved.
         </div>
