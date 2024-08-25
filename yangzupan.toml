@@ -66,7 +66,7 @@ publishDir = 'public1'
     [[params.footer.contact.list]]
         name = '微信二维码'
         icon = 'fa-brands fa-weixin'
-        isQrCode = true # 二维码必须有id
+        isQrCode = false # 二维码必须有id
         id = 'wx'
         direction = '' # top,
         link = 'https://u.wechat.com/EDzlGOmsLmBcZb_TCeBThNg'
