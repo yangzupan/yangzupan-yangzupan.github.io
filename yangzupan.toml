@@ -69,7 +69,7 @@ publishDir = 'public1'
         isQrCode = false # 二维码必须有id
         id = 'wx'
         direction = '' # top,
-        link = 'https://u.wechat.com/EDzlGOmsLmBcZb_TCeBThNg'
+        link = 'https://cdn.yangzupan.com/images/public/qrcode/social/wx.svg'
     [[params.footer.contact.list]]
         name = 'qq'
         icon = 'fa-brands fa-qq'
